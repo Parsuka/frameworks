@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "Laravel Restaurant API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Restaurants",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8001/api/restaurants"
+      }
+    },
+    {
+      "name": "GET Restaurant by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8001/api/restaurants/1"
+      }
+    },
+    {
+      "name": "POST Create Restaurant",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "url": "http://localhost:8001/api/restaurants",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Ресторан Київ\",\"address\":\"вул. Хрещатик 1\",\"phone\":\"+380671234567\",\"cuisine\":\"Ukrainian\"}"
+        }
+      }
+    },
+    {
+      "name": "PATCH Update Restaurant",
+      "request": {
+        "method": "PATCH",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "url": "http://localhost:8001/api/restaurants/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Ресторан Київ Updated\"}"
+        }
+      }
+    },
+    {
+      "name": "DELETE Restaurant",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8001/api/restaurants/1"
+      }
+    }
+  ]
+}
